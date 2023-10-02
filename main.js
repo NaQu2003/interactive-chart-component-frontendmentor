@@ -7,13 +7,15 @@ const fridayChart = document.querySelector('.friday-chart')
 const saturdayChart = document.querySelector('.saturday-chart')
 const sundayChart = document.querySelector('.sunday-chart')
 const total = document.querySelector('.total-cost')
-
+const chartBoxes = document.querySelectorAll('.chart-box')
+const tdData = document.querySelectorAll('.table-data')
 let jsonData;
 fetch('data.json')
 .then(results =>results.json())
 .then(data =>{
     for(let i=0;i<data.length;i++){
         costs[i].textContent = `$${data[i].amount}`   
+        
     }
     mondayChart.style.height = `${Math.round(data[0].amount * 3)}px`
     tuesdayChart.style.height = `${Math.round(data[1].amount * 3)}px`
@@ -25,73 +27,20 @@ fetch('data.json')
     let totalCost = 0;
     for (let i =0;i<data.length;i++){
         totalCost += data[i].amount
-       
-
     }
    total.textContent = `$${totalCost}`
     
 })
-
-
-
-// function showBox(box){
-
+for (let i =0;i<chartBoxes.length;i++){
+    chartBoxes[i].addEventListener('focus',()=>{
+        showBox(i)
+    })
+    chartBoxes[i].addEventListener('blur',()=>{
+        showBox(i)
+    })
     
-//     costs[box].style.display = "block";
-// }
-// function hideBox(box){
- 
-//     costs[box].style.display = "none";
-// }
+}
 
-
-
-
-
-mondayChart.addEventListener('focus',()=>{
-    showBox(0)
-})
-mondayChart.addEventListener('blur',()=>{
-    showBox(0)
-    
-})
-tuesdayChart.addEventListener('focus',()=>{
-    showBox(1)
-})
-tuesdayChart.addEventListener('blur',()=>{
-    showBox(1)
-    
-})
-wensdayChart.addEventListener('focus',()=>{
-    showBox(2)
-})
-wensdayChart.addEventListener('blur',()=>{
-    showBox(2)
-})
-thursdayChart.addEventListener('focus',()=>{
-    showBox(3)
-})
-thursdayChart.addEventListener('blur',()=>{
-    showBox(3)
-})
-fridayChart.addEventListener('focus',()=>{
-    showBox(4)
-})
-fridayChart.addEventListener('blur',()=>{
-    showBox(4)
-})
-saturdayChart.addEventListener('focus',()=>{
-    showBox(5)
-})
-saturdayChart.addEventListener('blur',()=>{
-    showBox(5)
-})
-sundayChart.addEventListener('focus',()=>{
-    showBox(6)
-})
-sundayChart.addEventListener('blur',()=>{
-    showBox(6)
-})
 function showBox(box){
     if(costs[box].style.display ===""){
         costs[box].style.display = "block";
