@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <main class="container">
+   <article class="balance-part">
+    <section>
+        <h1>My balance</h1>
+        <h2 tabindex="1"> &dollar;921.48</h2>
+    </section>
+    <section class="logo-container">
+      <img src="images/logo.svg" alt="company-name.jpg">
+    </section>
+  </article>
+    <article class="spending-part">
+      <h2>Spending - Last 7 days</h2>
+      
+      <section class="chart">
+        <div class="chart-box">
+          <div tabindex="2" class="monday-chart"></div>
+          <p>Mon</p>
+          <div class="appear-cost">$28.21</div>
+        </div>
+        <div class="chart-box">
+            <div tabindex="3" class="tuesday-chart"></div>
+            <div class="appear-cost">$28.21</div>
+            <p>Tue</p>
+          </div>
+          <div class="chart-box">
+              <div tabindex="4" class="wensday-chart"></div>
+              <div class="appear-cost">$28.21</div>
+              <p>Wed</p>
+            </div>
+            <div class="chart-box">
+                <div tabindex="5" class="thursday-chart"></div>
+                <div class="appear-cost">$28.21</div>
+                <p>thu</p>
+              </div>
+              <div class="chart-box">
+                  <div tabindex="6" class="friday-chart"></div>
+                  <div  class="appear-cost">$28.21</div>
+                  <p>fri</p>
+                </div>
+                <div class="chart-box">
+                    <div tabindex="7" class="saturday-chart"></div>
+                    <div class="appear-cost">$28.21</div>
+                    <p>sat</p>
+                  </div>
+                  <div class="chart-box">
+                      <div tabindex="8" class="sunday-chart"></div>
+                      <div class="appear-cost">$28.21</div>
+                      <p>sun</p>
+                    </div>
+      </section>
+        <section class="total-costs">
+          <div class=left-side>
+            <p>Total this month</p>
+              <h2 class="total-cost">&dollar;478.33</h2>
+          </div>
+          <div class="right-side">
+            <h2>+2.4&percnt;</h2>
+            <p>from last month</p>
+          </div>
+        </section>
+        
+            
+      
+        
+        
+     
+    </article>
+  
+  </main>
+
+  <!-- My balance
+  $921.48
+
+  Spending - Last 7 days
+
+  mon
+  tue
+  wed
+  thu
+  fri
+  sat
+  sun
+
+  Total this month
+  $478.33
+
+  +2.4%
+  from last month
+   -->
+   <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+:root{
+    --DARK-BROWN:hsl(25, 47%, 15%);
+    --MEDIUM-BROWN:hsl(28, 10%, 53%);
+    --CREAM:hsl(27, 66%, 92%);
+    --VERY-PALE-ORANGE:hsl(33, 100%, 98%);
+    --SOFT-RED:hsl(10, 79%, 65%);
+    --CYAN:hsl(186, 34%, 60%);
+}
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+img{
+    width:100%;
+}
+
+body{
+    font-size:18px;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans";
+    background-color:var(--CREAM);
+}
+.container{
+    margin:25px;
+}
+.balance-part{
+    display:flex;
+    align-items: center;
+    width:340px;
+    height:100px;
+    justify-content: space-between;
+    background-color:var(--SOFT-RED);
+    padding:16px;
+    border-radius: 16px;
+    margin-bottom:16px;
+}
+.balance-part h1{
+    font-size:12px;
+    color:white;
+    margin-bottom:16px;
+    font-weight: 400;
+}
+.balance-part h2{
+    color:white;
+    font-size:20px;
+    font-weight: 700;
+}
+.spending-part{
+    background-color:var(--VERY-PALE-ORANGE);
+    padding:16px;
+    width: 340px;
+    border-radius: 8px;
+}
+.spending-part h2 {
+    margin-bottom:54px;
+    font-size:24px;
+}
+.chart{
+    display:flex;
+    text-transform:lowercase;
+    column-gap:12px;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--MEDIUM-BROWN);
+    padding-bottom:25px;
+    margin-bottom:25px;
+    
+}
+.chart-box{
+    text-align: center;
+    position: relative;
+}
+.monday-chart{
+    height:50px;
+    width:32px;
+    background-color:var(--SOFT-RED);
+    border-radius:8px;
+    cursor:pointer;
+    transition:  opacity 0.15s;
+}
+.chart-box p {
+    margin-top:16px;
+    color:var(--MEDIUM-BROWN);
+    font-size:18px;
+}
+
+.tuesday-chart{
+    height:100px;
+    width:32px;
+    background-color:var(--SOFT-RED);
+    border-radius:8px;
+    transition:  opacity 0.15s;
+    cursor:pointer;
+    transition:  opacity 0.15s;
+}
+
+.wensday-chart{
+    height:150px;
+    width:32px;
+    background-color:var(--CYAN);
+    border-radius:8px;
+    transition:  opacity 0.15s;
+    cursor:pointer;
+    transition:  opacity 0.15s;
+}
+
+.thursday-chart{
+    height:90px;
+    width:32px;
+    background-color:var(--SOFT-RED);
+    border-radius:8px;
+    transition:  opacity 0.15s;
+    cursor:pointer;
+    transition:  opacity 0.15s;
+}
+
+.friday-chart{
+    height:65px;
+    width:32px;
+    background-color:var(--SOFT-RED);
+    border-radius:8px;
+    transition:  opacity 0.15s;
+    cursor:pointer;
+    transition:  opacity 0.15s;
+}
+
+.saturday-chart{
+    height:125px;
+    width:32px;
+    background-color:var(--SOFT-RED);
+    border-radius:8px;
+    transition:  opacity 0.15s;
+    cursor:pointer;
+    transition:  opacity 0.15s;
+}
+
+.sunday-chart{
+    height:70px;
+    width:32px;
+    background-color:var(--SOFT-RED);
+    border-radius:8px;
+    transition:  opacity 0.15s;
+    cursor:pointer;
+    transition:  opacity 0.15s;
+}
+.total-costs{
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:16px;
+}
+.total-costs .left-side p {
+    font-size:18px;
+    margin-bottom:16px;
+    color:var(--MEDIUM-BROWN);
+}
+.total-costs .left-side h2{
+    margin:0px;
+    font-size:36px;
+}
+.total-costs .right-side{
+    text-align: right;
+    margin-top:36px;
+}
+ 
+.total-costs .right-side h2{
+        font-size:16px;
+        margin:0px;
+        
+}
+.total-costs .right-side p{
+    color:var(--MEDIUM-BROWN);
+}
+.appear-cost{
+    position: absolute;
+    top:-50px;
+    left:-10px;
+    color:var(--CREAM);
+    background-color:var(--DARK-BROWN);
+    width:54px;
+    height:40px;
+    line-height: 2.8;
+    border-radius:8px;
+    font-size:14px;
+    display:none;
+    font-weight: 700;
+    
+    
+}
+.monday-chart:hover,.tuesday-chart:hover,.wensday-chart:hover,.thursday-chart:hover,.friday-chart:hover,.saturday-chart:hover,.sunday-chart:hover{
+    opacity: 0.8;
+}
+
+.monday-chart:hover ~ .appear-cost{
+    display:block;
+}
+.tuesday-chart:hover ~ .appear-cost{
+    display:block;
+}
+.wensday-chart:hover ~ .appear-cost{
+    display:block;
+}
+.thursday-chart:hover ~ .appear-cost{
+    display:block;
+}
+.friday-chart:hover ~ .appear-cost{
+    display:block;
+}
+.saturday-chart:hover ~ .appear-cost{
+    display:block;
+}
+.sunday-chart:hover ~ .appear-cost{
+    display:block;
+}
+
+@media (min-width:40rem){
+   
+    .balance-part{
+        width: 535px;
+        margin-bottom:24px;
+       
+    }
+    .chart{
+        column-gap:20px;
+    }
+    .spending-part{
+        width:535px;
+        
+    }
+    .monday-chart{
+        width:50px;
+    }
+    .tuesday-chart{
+        width:50px;
+    }
+    .wensday-chart{
+        width:50px;
+    }
+    .thursday-chart{
+        width:50px;
+    }
+    .friday-chart{
+        width:50px;
+    }
+    .saturday-chart{
+        width:50px;
+    }
+    .sunday-chart{
+        width:50px;
+    }
+    .appear-cost{
+        width:72px;
+        font-size:18px;
+        line-height: 2.3;
+    }
+    
+}
