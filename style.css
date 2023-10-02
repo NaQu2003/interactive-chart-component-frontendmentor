@@ -229,6 +229,11 @@ body{
     position: absolute;
     left:-9999px;
 }
+
+.sr-only-paragraph{
+    position: absolute;
+    left:-9999px;
+}
 @media (min-width:40rem){
    
     .balance-part{
